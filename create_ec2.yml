@@ -1,0 +1,15 @@
+---
+- hosts: localhost
+  tasks:
+    - name: creating ec2
+      ec2:
+        key_name: ########
+        instance_type: t2.micro
+        image: ami-0022f774911c1d690
+        wait: yes
+        count: 1
+        vpc_subnet_id: subnet-0ec11b548cb57a991
+        assign_public_ip: yes
+        region: us-east-1
+        aws_access_key: @@@@@@@@@
+        aws_secret_key: @@@@@@@@@@@@@@@@
